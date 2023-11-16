@@ -4,7 +4,7 @@ function sendEmail() {
         Host : "smtp.elasticemail.com",
         Username : "crobinson.atl@gmail.com",
         Password : "9778776A13A412CEBF6CA231139F01A0340A",
-        To : 'cobinson.atl@gmail.com',
+        To : 'crobinson.atl@gmail.com',
         From : document.getElementById("email").value,
         Subject : "New Enrollment from AddictivemathInc.",
         Body : "Student Name: " + document.getElementById("name".value)
