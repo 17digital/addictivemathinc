@@ -5,8 +5,8 @@ function sendEmail() {
         Username : "crobinson.atl@gmail.com",
         Password : "9778776A13A412CEBF6CA231139F01A0340A",
         To : 'iamchris.av@gmail.com',
-        From : document.getElementById("email").value,
-        Subject : "New Enrollment from AddictivemathInc.",
+        From : 'crobinson.atl@gmail.com',
+        Subject : "New Enrollment from AddictivemathInc",
         Body : "Student Name: " + document.getElementById("name".value)
                 + "<br> Email: " + document.getElementById("email".value)
                 + "<br> Parent First Name : " + document.getElementById("parentFirst".value)
