@@ -1,9 +1,7 @@
 
 function sendEmail() {
     Email.send({
-        Host : "smtp.elasticemail.com",
-        Username : "crobinson.atl@gmail.com",
-        Password : "9778776A13A412CEBF6CA231139F01A0340A",
+        SecureToken : "1d84be5b-3654-4cb8-8068-21e3db7504d8",
         To : 'iamchris.av@gmail.com',
         From : 'crobinson.atl@gmail.com',
         Subject : "New Enrollment from AddictivemathInc",
