@@ -90,7 +90,7 @@
 										<p>After filling out the enrollment form, an AddictiveMath Inc representative will contact you and confirm your child’s virtual tutor session </p>
 
 										<!--<form method="post" action="#" onsubmit="sendEmail()"> -->
-										<form onsubmit="sendEmail(); reset(); return false">
+										<form id="myForm" method="POST">
 											<div class="row gtr-uniform gtr-50">
 												<!--Students Name-->
 												<div class="col-6 col-12-xsmall">
@@ -205,7 +205,7 @@
 		
 												<div class="col-12">
 													<ul class="actions">
-														<li><input type="submit" value="Lets Begin!" class="primary" /></li>
+														<li><input type="button" value="Lets Begin!" class="primary" onclick="sendEmail()" /></li>
 														<li><input type="reset" value="Reset" /></li>
 													</ul>
 												</div>
@@ -249,7 +249,7 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script src="https://smtpjs.com/v3/smtp.js"></script>
-			<script src="assets/js/enrollment.encrypt.js"></script>
+			<script src="assets/js/enrollment.js"></script>
 
 
 	</body>
