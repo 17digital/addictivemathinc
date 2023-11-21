@@ -90,7 +90,7 @@
 										<p>After filling out the enrollment form, an AddictiveMath Inc representative will contact you and confirm your child’s virtual tutor session </p>
 
 										<!--<form method="post" action="#" onsubmit="sendEmail()"> -->
-										<form id="myForm" method="POST">
+										<form onsubmit="sendEmail(); reset(); return false">
 											<div class="row gtr-uniform gtr-50">
 												<!--Students Name-->
 												<div class="col-6 col-12-xsmall">
@@ -131,39 +131,39 @@
 												<div class="col-6 col-12-xsmall">
 													<select name="category" id="tutoringNeeds">
 														<option value="">- Why Does the Student need Tutoring -</option>
-														<option value="1">Prepare for Test</option>
-														<option value="1">General Improvement</option>
-														<option value="1">Help with a specific topic</option>
-														<option value="1">Other</option>
+														<option value="Test">Prepare for Test</option>
+														<option value="Improvement">General Improvement</option>
+														<option value="Specific Topic">Help with a specific topic</option>
+														<option value="Other">Other</option>
 													</select>
 												</div>
 		
 												<div class="col-6 col-12-xsmall">
 													<select name="category" id="gradeLevel">
 														<option value="">- Student Current Grade Level? -</option>
-														<option value="1">Kindergarten</option>
+														<option value="Kindergarten">Kindergarten</option>
 														<option value="1">First Grade</option>
-														<option value="1">Second Grade</option>
-														<option value="1">Third Grade</option>
-														<option value="1">Fourth Grade</option>
-														<option value="1">Fifth Grade</option>
-														<option value="1">Sixth Grade</option>
-														<option value="1">Seventh Grade</option>
-														<option value="1">Eigth Grade</option>
-														<option value="1">Ninth Grade</option>
-														<option value="1">Tenth Grade</option>
-														<option value="1">Eleventh Grade</option>
-														<option value="1">Twelfth Grade</option>
+														<option value="2">Second Grade</option>
+														<option value="3">Third Grade</option>
+														<option value="4">Fourth Grade</option>
+														<option value="5">Fifth Grade</option>
+														<option value="6">Sixth Grade</option>
+														<option value="7">Seventh Grade</option>
+														<option value="8">Eigth Grade</option>
+														<option value="9">Ninth Grade</option>
+														<option value="10">Tenth Grade</option>
+														<option value="11">Eleventh Grade</option>
+														<option value="12">Twelfth Grade</option>
 													</select>
 												</div>
 		
 												<div class="col-6 col-12-xsmall">
 													<select name="category" id="howOften">
 														<option value="">- How Often would you like tutoring? -</option>
-														<option value="1">Once a week</option>
-														<option value="1">More than once a week</option>
-														<option value="1">As recommended by tutor</option>
-														<option value="1">Other</option>
+														<option value="Once week">Once a week</option>
+														<option value="Multiple">More than once a week</option>
+														<option value="you recommend">As recommended by tutor</option>
+														<option value="other">Other</option>
 														
 													</select>
 												</div>
@@ -171,13 +171,13 @@
 												<div class="col-6 col-12-xsmall">
 													<select name="category" id="tutorDay">
 														<option value="">- Desired tutoring Day? -</option>
-														<option value="1">Monday</option>
-														<option value="1">Tuesday</option>
-														<option value="1">Wednesday</option>
-														<option value="1">Thursday</option>
-														<option value="1">Friday</option>
-														<option value="1">Saturday</option>
-														<option value="1">Sunday</option>
+														<option value="Mon">Monday</option>
+														<option value="Tue">Tuesday</option>
+														<option value="Wed">Wednesday</option>
+														<option value="Thur">Thursday</option>
+														<option value="Fri">Friday</option>
+														<option value="Sat">Saturday</option>
+														<option value="Sun">Sunday</option>
 														
 													</select>
 												</div>
@@ -185,9 +185,9 @@
 												<div class="col-6 col-12-xsmall">
 													<select name="category" id="category">
 														<option value="">- When would you like to Start? -</option>
-														<option value="1">As Soon as Possible</option>
-														<option value="1">Within the next 1-2 weeks</option>
-														<option value="1">By a specific Date</option>
+														<option value="Soon">As Soon as Possible</option>
+														<option value="next 2weeks">Within the next 1-2 weeks</option>
+														<option value="specific">By a specific Date</option>
 														
 														
 													</select>
@@ -205,7 +205,7 @@
 		
 												<div class="col-12">
 													<ul class="actions">
-														<li><input type="button" value="Lets Begin!" class="primary" onclick="sendEmail()" /></li>
+														<li><input type="submit" value="Lets Begin!" class="primary" /></li>
 														<li><input type="reset" value="Reset" /></li>
 													</ul>
 												</div>
@@ -249,7 +249,7 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script src="https://smtpjs.com/v3/smtp.js"></script>
-			<script src="assets/js/enrollment.js"></script>
+			<script src="assets/js/enrollment.encrypt.js"></script>
 
 
 	</body>
