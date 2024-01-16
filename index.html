@@ -175,12 +175,13 @@ Old color e44c65 -->
 							<h2>Stay Connected with AddictiveMath Inc.</h2>
 							<p>We look forward to speaking with you soon!</p>
 						</header>
-						<form method="post" action="#" class="cta">
+						<form name="submit-to-google-sheet" class="cta">
 							<div class="row gtr-uniform gtr-50">
-								<div class="col-8 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Subscribe for email updates!" /></div>
+								<div class="col-8 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Subscribe for email updates!" required /></div>
 								<div class="col-4 col-12-xsmall"><input type="submit" value="Subscribe" class="fit primary" /></div>
 							</div>
 						</form>
+						<span id="msg"></span>
 					</div>
 				</section>
 
@@ -212,6 +213,26 @@ Old color e44c65 -->
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			
+			<script>
+			  const scriptURL = 'https://script.google.com/macros/s/AKfycbxtLt_eIrto35lDFaMutV9ZKVUmZdmsWgpy0t5qtrNZn2snSItxbNn7XdxoWzp-LGATNg/exec'
+			  const form = document.forms['submit-to-google-sheet']
+			  const msg = document.getElementById("msg")
+
+			  form.addEventListener('submit', e => {
+				e.preventDefault()
+				fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+				  .then(response => {
+					msg.innerHTML = "Thank You for Subscribing!"
+					
+					setTimeout(function(){
+						msg.innerHTML = ""
+					},5000)
+					form.reset()
+				  })
+				  .catch(error => console.error('Error!', error.message))
+			  })
+			</script>
 
 	</body>
 </html>
